@@ -1,3 +1,6 @@
+#ifndef system_declares_h
+#define system_declares_h
+
 #include "config.h"
 
 int32_t sys_position[N_AXIS];      // Real-time machine (aka home) position vector in steps.
@@ -12,4 +15,6 @@ volatile uint8_t sys_rt_exec_accessory_override; // Global realtime executor bit
 #ifdef DEBUG
   #define EXEC_DEBUG_REPORT  bit(0)
   volatile uint8_t sys_rt_exec_debug;
+#endif
+
 #endif
